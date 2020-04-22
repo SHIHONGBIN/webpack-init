@@ -1,0 +1,9 @@
+#first{
+  border: solid 1px #ff5d73
+}
+#bg1{
+  width: 200px;height: 200px;background: url('../images/icon_fq_nor.png') no-repeat center center; border: solid 1px green;
+}
+#bg2{
+  width: 200px;height: 200px;background: url('../images/wwqds.jpg'); width: 50%;
+}
