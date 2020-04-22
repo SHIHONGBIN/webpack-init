@@ -20,7 +20,7 @@ module.exports = {
       // use 则指定了 loader 的类型。
       // 注意：数组中的loader不能省略扩展名
       {
-        test: /\.scss$/,
+        test: /\.scss$/i,
         // 注意 是sass-loader ，不是 scss-loader,顺序要对（不然报错）
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -28,7 +28,7 @@ module.exports = {
         })
       },
       {
-        test: /\.less$/,
+        test: /\.less$/i,
         // 注意 是sass-loader ，不是 scss-loader,顺序要对（不然报错）
         // use:[ 'style-loader', 'css-loader', 'less-loader']
         use: ExtractTextPlugin.extract({
@@ -37,7 +37,7 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|jpg|gif|ttf|eot|woff|woff2|svg)$/,
+        test: /\.(png|jpg|gif|ttf|eot|woff|woff2|svg)$/i,
         use:[
           {
             loader: 'url-loader',
@@ -49,7 +49,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
+        test: /\.js$/i,
         exclude: /(node_modules)/,
         use:{
           loader: 'babel-loader',
@@ -60,7 +60,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           use: "css-loader"
