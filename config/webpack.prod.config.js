@@ -6,7 +6,6 @@ const OptimizeCss = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 //每次启动清理output
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = merge(base, {
     mode: 'production',
@@ -28,8 +27,6 @@ module.exports = merge(base, {
         new webpack.DefinePlugin({
             DEV:JSON.stringify('production')
         }),
-      //每次清理output里面的dist文件夹
-      new CleanWebpackPlugin(),
     ],
       //公共js css抽取
   optimization: {
