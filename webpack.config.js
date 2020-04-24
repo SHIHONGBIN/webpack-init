@@ -65,7 +65,19 @@ module.exports = {
           fallback: "style-loader",
           use: "css-loader"
         })
-      }
+      },
+    //   {
+    //     test: /\.html$/,
+    //     // 处理html源文件，包括html中图片路径加载、监听html文件改变重新编译等
+    //     use: [{
+    //         loader: 'html-loader',
+    //         options: {
+    //             minimize: true,
+    //             removeComments: false,
+    //             collapseWhitespace: false
+    //         }
+    //     }]
+    // }
     ]
   },
   devServer:{

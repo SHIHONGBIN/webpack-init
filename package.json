@@ -4,13 +4,19 @@
   "description": "none",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server --open --inline",
-    "test": "webpack"
+    "test": "npm run test",
+    "dev": "webpack-dev-server --config config/webpack.dev.config.js --open",
+    "build": "webpack --config config/webpack.prod.config.js"
   },
   "author": "shihongbin",
   "license": "ISC",
   "dependencies": {
-    "path": "^0.12.7"
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "path": "^0.12.7",
+    "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -23,11 +29,14 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.2.0",
+    "html-withimg-loader": "^0.1.16",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.4",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
